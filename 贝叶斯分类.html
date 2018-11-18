@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="西瓜书,python," />
 
 
 
@@ -79,16 +79,29 @@
 
 
 
-<meta name="description" content="I walk slowly, but I never walk backward.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yitao Chang">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="基本原理假设有N种可能分类的标记，即y={c1,c2,…,cN},λij表示真实分类为j错分为i类产生的损失。基于后验概率p(ci|x)可获得将样本x分类为ci所产生的期望损失，即在样本x上的“条件风险”：希望能找到一个判别准则h，能使的总体风险最小化：若判定准则h能使得样本x的条件风险最小化，则总体风险也将被最小化。这就产生贝叶斯判别准则：为最小化总体风险R(h)，只需在每个样本x选择那个使条件">
+<meta name="keywords" content="西瓜书,python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贝叶斯分类">
+<meta property="og:url" content="http://yoursite.com/贝叶斯分类.html">
 <meta property="og:site_name" content="Yitao Chang">
-<meta property="og:description" content="I walk slowly, but I never walk backward.">
+<meta property="og:description" content="基本原理假设有N种可能分类的标记，即y={c1,c2,…,cN},λij表示真实分类为j错分为i类产生的损失。基于后验概率p(ci|x)可获得将样本x分类为ci所产生的期望损失，即在样本x上的“条件风险”：希望能找到一个判别准则h，能使的总体风险最小化：若判定准则h能使得样本x的条件风险最小化，则总体风险也将被最小化。这就产生贝叶斯判别准则：为最小化总体风险R(h)，只需在每个样本x选择那个使条件">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14093803-f0c23d9360e21719.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14093803-5a12806e63066402.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14093803-9db53033b3774c1f.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14093803-c80b6d2d2a0e9040.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14093803-40755f15e9bb80f8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14093803-571ad84b6c624200.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14093803-7e4c094559c3d5e8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14093803-5c49e733fb2cd29c.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14093803-f1e39cb4624f00e4.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14093803-88540850c1d59876.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-11-18T13:05:22.479Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yitao Chang">
-<meta name="twitter:description" content="I walk slowly, but I never walk backward.">
+<meta name="twitter:title" content="贝叶斯分类">
+<meta name="twitter:description" content="基本原理假设有N种可能分类的标记，即y={c1,c2,…,cN},λij表示真实分类为j错分为i类产生的损失。基于后验概率p(ci|x)可获得将样本x分类为ci所产生的期望损失，即在样本x上的“条件风险”：希望能找到一个判别准则h，能使的总体风险最小化：若判定准则h能使得样本x的条件风险最小化，则总体风险也将被最小化。这就产生贝叶斯判别准则：为最小化总体风险R(h)，只需在每个样本x选择那个使条件">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/14093803-f0c23d9360e21719.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -118,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/贝叶斯分类.html"/>
 
 
 
 
 
-  <title>Yitao Chang</title>
+  <title>贝叶斯分类 | Yitao Chang</title>
   
 
 
@@ -143,8 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,162 +249,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/线性模型.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yitao Chang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yitao Chang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/线性模型.html" itemprop="url">线性模型</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-18T21:04:15+08:00">
-                2018-11-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Machine-Leaming/" itemprop="url" rel="index">
-                    <span itemprop="name">Machine Leaming</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          基本思路
-大体的思路是试图训练一个线性的模型，通过样本的属性值来预测一个目标值。根据单一样本属性值的数目，分为单变量和多变量的线性回归问题。
-假设函数:
-   
-优化目标
-线性模型最关键的就是确定线性
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/线性模型.html#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -422,9 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/贝叶斯分类.html" itemprop="url">贝叶斯分类</a></h1>
+          <h1 class="post-title" itemprop="name headline">贝叶斯分类</h1>
         
 
         <div class="post-meta">
@@ -496,18 +353,10 @@
       
 
       
-        
-          
-          基本原理假设有N种可能分类的标记，即y={c1,c2,…,cN},λij表示真实分类为j错分为i类产生的损失。基于后验概率p(ci|x)可获得将样本x分类为ci所产生的期望损失，即在样本x上的“条件风
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/贝叶斯分类.html#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h1 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h1><p>假设有N种可能分类的标记，即y={c1,c2,…,cN},λij表示真实分类为j错分为i类产生的损失。基于后验概率p(ci|x)可获得将样本x分类为ci所产生的期望损失，即在样本x上的“条件风险”：<br><img src="https://upload-images.jianshu.io/upload_images/14093803-f0c23d9360e21719.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>希望能找到一个判别准则h，能使的总体风险最小化：<br><img src="https://upload-images.jianshu.io/upload_images/14093803-5a12806e63066402.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>若判定准则h能使得样本x的条件风险最小化，则总体风险也将被最小化。这就产生贝叶斯判别准则：<strong>为最小化总体风险R(h)，只需在每个样本x选择那个使条件风险R(ci|x)最小化的那个类。</strong>即：<br><img src="https://upload-images.jianshu.io/upload_images/14093803-9db53033b3774c1f.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>h*(x)称为贝叶斯最优分类器，与之对应的总体风险R(h*)称为贝叶斯风险。<br>如果目标是最小目标分类错误率，则误判λij可写为:<br><img src="https://upload-images.jianshu.io/upload_images/14093803-c80b6d2d2a0e9040.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>此时条件风险为：<br><img src="https://upload-images.jianshu.io/upload_images/14093803-40755f15e9bb80f8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>所以最小化分类错误的贝叶斯最优分类器为：<br><img src="https://upload-images.jianshu.io/upload_images/14093803-571ad84b6c624200.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>即对每个样本x，选择能使后验概率最大的类别。<br>基于贝叶斯定理，后验概率p(c|x)可以由下面公式获得：<br><img src="https://upload-images.jianshu.io/upload_images/14093803-7e4c094559c3d5e8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>p(c)是累“先验概率”，根据大数定理，可以通过各类样本出现的频率估计；p(x)与类别无关。所以关键是要确定类条件概率p(x|c)。</p>
+<h1 id="朴素贝叶斯分类器"><a href="#朴素贝叶斯分类器" class="headerlink" title="朴素贝叶斯分类器"></a>朴素贝叶斯分类器</h1><p>估计条件概率p(x|c)的最大困难在于，类条件概率是所有属性的联合概率，从有限的样本很难估计。为避开这个问题，朴素贝叶斯分类器采用了“属性独立性假设”。即：<br><img src="https://upload-images.jianshu.io/upload_images/14093803-5c49e733fb2cd29c.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>由于对所有类别来说p(x)是一样的，因此朴素贝叶斯分类器的表达式为：<br><img src="https://upload-images.jianshu.io/upload_images/14093803-f1e39cb4624f00e4.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>值得注意的是，当某个属性值未出现，这个时候p(xi|c)等于0。这样会将其他出现的属性值抹去，这样是不合理的。为了避免这种情况，常用“拉普拉斯修正”。具体来说，令N表示训练集D中的类别数，Ni表示第i个属性可能的取值数，则修正为：<br><img src="https://upload-images.jianshu.io/upload_images/14093803-88540850c1d59876.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><strong><em>未完待续</em></strong></p>
+
       
     </div>
     
@@ -522,315 +371,42 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Numpy 学习记录.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yitao Chang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yitao Chang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Numpy 学习记录.html" itemprop="url">Numpy 学习记录</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-20T11:48:28+08:00">
-                2018-10-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/西瓜书/" rel="tag"># 西瓜书</a>
           
-
+            <a href="/tags/python/" rel="tag"># python</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          NumPy基础：数组和矢量计算
-NumPy(Numerical Python的简称)是高性能科学计算和数据分析的基础包。其部分功能如下：
-
-ndarray,一个具有矢量算术运算和复杂广播能力的快速且节
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/Numpy 学习记录.html#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Numpy 学习记录.html" rel="next" title="Numpy 学习记录">
+                <i class="fa fa-chevron-left"></i> Numpy 学习记录
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/MarkDown 基本语法.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yitao Chang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yitao Chang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/MarkDown 基本语法.html" itemprop="url">MarkDown 基本语法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-13T22:52:49+08:00">
-                2018-09-13
-              </time>
+              <a href="/线性模型.html" rel="prev" title="线性模型">
+                线性模型 <i class="fa fa-chevron-right"></i>
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          本文出处
-markdown是一种纯文本格式的标记语言。通常简单的标记语法，它可以使普通文本内容具有一定的格式。
-相比WYS/WYG编辑器优点：1、因为是纯文本，所以只要支持markdown的地方都能获
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/MarkDown 基本语法.html#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -840,10 +416,11 @@ markdown是一种纯文本格式的标记语言。通常简单的标记语法，
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -851,6 +428,10 @@ markdown是一种纯文本格式的标记语言。通常简单的标记语法，
 
 
           
+
+  
+
+
 
         </div>
         
@@ -871,8 +452,17 @@ markdown是一种纯文本格式的标记语言。通常简单的标记语法，
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -972,6 +562,22 @@ markdown是一种纯文本格式的标记语言。通常简单的标记语法，
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本原理"><span class="nav-number">1.</span> <span class="nav-text">基本原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#朴素贝叶斯分类器"><span class="nav-number">2.</span> <span class="nav-text">朴素贝叶斯分类器</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1112,6 +718,10 @@ markdown是一种纯文本格式的标记语言。通常简单的标记语法，
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
